@@ -21,7 +21,7 @@ Este projeto compara os protocolos de roteamento dinâmico **RIP** e **OSPF** em
 - **Topologias**: `frr3_ospf.clab.yml` e `frr3_rip.clab.yml`
 - **Configs FRR**: diretórios `cfg/ospf` e `cfg/rip`
 - **Scripts**:
-  - `run2.sh`: executa um teste completo (auto-limpa, sobe a topologia, mede métricas, salva em `results/results.log`)
+  - `run.sh`: executa um teste completo (auto-limpa, sobe a topologia, mede métricas, salva em `results/results.log`)
   - `clean.sh`: limpeza manual
 - **Resultados**: `results/results.log`
 
@@ -30,12 +30,12 @@ Este projeto compara os protocolos de roteamento dinâmico **RIP** e **OSPF** em
 ## Como Executar
 Exemplo OSPF:
 ```bash
-./run2.sh ospf
+./run.sh ospf
 ```
 
 Exemplo RIP:
 ```bash
-./run2.sh rip
+./run.sh rip
 ```
 
 Os resultados são salvos em `results/results.log` com timestamp e métricas.
@@ -55,6 +55,6 @@ Os resultados são salvos em `results/results.log` com timestamp e métricas.
 ## Observações
 - Scripts já usam auto-sudo, mas se houver erro de permissão, rodar com:
   ```bash
-  sudo -E ./run2.sh ospf
+  sudo -E ./run.sh ospf
   ```
 - Os resultados são appendados em `results/results.log`.
