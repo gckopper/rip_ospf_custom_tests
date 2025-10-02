@@ -1,30 +1,40 @@
 name: frr3
 topology:
   nodes:
-    r1:
+    ra:
       kind: linux
       image: frrouting/frr:latest
       binds:
-        - ./cfg/ospf/r1:/etc/frr
-    r2:
+        - ./cfg/ospf/ra:/etc/frr
+    rb:
       kind: linux
       image: frrouting/frr:latest
       binds:
-        - ./cfg/ospf/r2:/etc/frr
-    r3:
+        - ./cfg/ospf/rb:/etc/frr
+    rc:
       kind: linux
       image: frrouting/frr:latest
       binds:
-        - ./cfg/ospf/r3:/etc/frr
+        - ./cfg/ospf/rc:/etc/frr
     h1:
+      kind: linux
+      image: ghcr.io/hellt/network-multitool:latest
+    h2:
       kind: linux
       image: ghcr.io/hellt/network-multitool:latest
     h3:
       kind: linux
       image: ghcr.io/hellt/network-multitool:latest
+    h4:
+      kind: linux
+      image: ghcr.io/hellt/network-multitool:latest
   links:
-    - endpoints: ["r1:eth1","r2:eth1"]
-    - endpoints: ["r2:eth2","r3:eth1"]
-    - endpoints: ["r3:eth2","r1:eth2"]
-    - endpoints: ["h1:eth1","r1:eth3"]
-    - endpoints: ["h3:eth1","r3:eth3"]
+    # Router mesh
+    - endpoints: ["ra:eth1","rb:eth1"]
+    - endpoints: ["ra:eth2","rc:eth1"]
+    - endpoints: ["rb:eth2","rc:eth2"]
+    # Hosts
+    - endpoints: ["h1:eth1","ra:eth3"]
+    - endpoints: ["h2:eth1","ra:eth4"]
+    - endpoints: ["h3:eth1","rb:eth3"]
+    - endpoints: ["h4:eth1","rc:eth3"]
