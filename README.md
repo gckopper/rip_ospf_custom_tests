@@ -38,19 +38,6 @@ curl -sL https://get.containerlab.dev | sudo -E bash
 
 ### Diagrama da Topologia
 
-```text
-   h1            h2
-    |             |
-   (ra)-----------(rb)
-    |\            /|
-    | \          / |
-    |  \        /  |
-    |   \      /   |
-   (rc)--------    |
-     |             |
-    h4            h3
-```
-
 - **ra, rb, rc** formam uma malha completa (triângulo).
 - h1 e h2 estão no router A (ra), cada um em uma LAN distinta.
 - h3 está no router B (rb).
