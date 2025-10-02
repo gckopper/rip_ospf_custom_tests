@@ -50,7 +50,7 @@ curl -sL https://get.containerlab.dev | sudo -E bash
 - **Topologias**: `frr3_ospf.clab.yml` e `frr3_rip.clab.yml`
 - **Configurações FRR**: diretórios `cfg/ospf` e `cfg/rip`
 - **Scripts**:
-  - `run2.sh <ospf|rip>` → auto-limpa, sobe a topologia, configura hosts, mede métricas e salva em `results/results.log`
+  - `run.sh <ospf|rip>` → auto-limpa, sobe a topologia, configura hosts, mede métricas e salva em `results/results.log`
   - `clean.sh` → limpeza manual completa
 - **Resultados**: `results/results.log`
 
@@ -60,17 +60,17 @@ curl -sL https://get.containerlab.dev | sudo -E bash
 
 Exemplo OSPF:
 ```bash
-./run2.sh ospf
+./run.sh ospf
 ```
 
 Exemplo RIP:
 ```bash
-./run2.sh rip
+./run.sh rip
 ```
 
 Se ocorrer erro de permissão, utilize:
 ```bash
-sudo -E ./run2.sh ospf
+sudo -E ./run.sh ospf
 ```
 
 ---
