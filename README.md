@@ -1,4 +1,4 @@
-# RIP vs OSPF — Testes de Convergência, Recuperação e Overhead
+# RIP vs OSPF vs Custom — Testes de Convergência, Recuperação e Overhead
 
 Este projeto compara os protocolos de roteamento dinâmico **RIP** e **OSPF** em um laboratório simples utilizando [FRRouting (FRR)](https://frrouting.org/) e [Containerlab](https://containerlab.dev/).
 
