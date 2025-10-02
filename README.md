@@ -47,10 +47,10 @@ curl -sL https://get.containerlab.dev | sudo -E bash
 
 ## Estrutura do Projeto
 
-- **Topologias**: `frr3_ospf.clab.yml` e `frr3_rip.clab.yml`
-- **Configurações FRR**: diretórios `cfg/ospf` e `cfg/rip`
+- **Topologias**: `frr3_ospf.clab.yml`, `frr3_rip.clab.yml`, `custom.clab.yml`
+- **Configurações FRR**: diretórios `cfg/ospf`, `cfg/rip` e `cfg/custom`
 - **Scripts**:
-  - `run.sh <ospf|rip>` → auto-limpa, sobe a topologia, configura hosts, mede métricas e salva em `results/results.log`
+  - `run.sh <ospf|rip|custom>` → auto-limpa, sobe a topologia, configura hosts, mede métricas e salva em `results/results.log`
   - `clean.sh` → limpeza manual completa
 - **Resultados**: `results/results.log`
 
@@ -66,6 +66,11 @@ Exemplo OSPF:
 Exemplo RIP:
 ```bash
 ./run.sh rip
+```
+
+Exemplo Custom:
+```bash
+./run.sh custom
 ```
 
 Se ocorrer erro de permissão, utilize:
@@ -86,6 +91,7 @@ sudo -E ./run.sh ospf
 3. **Overhead de tráfego de controle**  
    Número de pacotes de controle em 60s:
    - RIP → `udp port 520`
+   - Custom → `udp port 8888`
    - OSPF → `ip proto 89`
 
 ---

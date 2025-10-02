@@ -1,0 +1,386 @@
+{
+  "name": "frr3",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-e329cb079806",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "3fff:172:20:20::/64",
+        "ipv6-gw": "3fff:172:20:20::1",
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": ["ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIC5QFBgxbpkUscVFu09c1Fk+BeYXMbzrCNgs+g8yTRCJ"],
+  "nodes": {
+    "h1": {
+      "index": "0",
+      "shortname": "h1",
+      "longname": "clab-frr3-h1",
+      "fqdn": "h1.frr3.io",
+      "group": "",
+      "labdir": "/home/mininet/rip_ospf_tests/clab-frr3/h1",
+      "kind": "linux",
+      "image": "ghcr.io/hellt/network-multitool:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.6",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::6",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-e329cb079806",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/mininet/rip_ospf_tests/clab-frr3/h1",
+        "clab-node-longname": "clab-frr3-h1",
+        "clab-node-name": "h1",
+        "clab-node-type": "",
+        "clab-owner": "mininet",
+        "clab-topo-file": "/home/mininet/rip_ospf_tests/custom.clab.yml",
+        "containerlab": "frr3"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "h2": {
+      "index": "1",
+      "shortname": "h2",
+      "longname": "clab-frr3-h2",
+      "fqdn": "h2.frr3.io",
+      "group": "",
+      "labdir": "/home/mininet/rip_ospf_tests/clab-frr3/h2",
+      "kind": "linux",
+      "image": "ghcr.io/hellt/network-multitool:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-e329cb079806",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/mininet/rip_ospf_tests/clab-frr3/h2",
+        "clab-node-longname": "clab-frr3-h2",
+        "clab-node-name": "h2",
+        "clab-node-type": "",
+        "clab-owner": "mininet",
+        "clab-topo-file": "/home/mininet/rip_ospf_tests/custom.clab.yml",
+        "containerlab": "frr3"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "h3": {
+      "index": "2",
+      "shortname": "h3",
+      "longname": "clab-frr3-h3",
+      "fqdn": "h3.frr3.io",
+      "group": "",
+      "labdir": "/home/mininet/rip_ospf_tests/clab-frr3/h3",
+      "kind": "linux",
+      "image": "ghcr.io/hellt/network-multitool:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::5",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-e329cb079806",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/mininet/rip_ospf_tests/clab-frr3/h3",
+        "clab-node-longname": "clab-frr3-h3",
+        "clab-node-name": "h3",
+        "clab-node-type": "",
+        "clab-owner": "mininet",
+        "clab-topo-file": "/home/mininet/rip_ospf_tests/custom.clab.yml",
+        "containerlab": "frr3"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "h4": {
+      "index": "3",
+      "shortname": "h4",
+      "longname": "clab-frr3-h4",
+      "fqdn": "h4.frr3.io",
+      "group": "",
+      "labdir": "/home/mininet/rip_ospf_tests/clab-frr3/h4",
+      "kind": "linux",
+      "image": "ghcr.io/hellt/network-multitool:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.8",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::8",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-e329cb079806",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/mininet/rip_ospf_tests/clab-frr3/h4",
+        "clab-node-longname": "clab-frr3-h4",
+        "clab-node-name": "h4",
+        "clab-node-type": "",
+        "clab-owner": "mininet",
+        "clab-topo-file": "/home/mininet/rip_ospf_tests/custom.clab.yml",
+        "containerlab": "frr3"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "ra": {
+      "index": "4",
+      "shortname": "ra",
+      "longname": "clab-frr3-ra",
+      "fqdn": "ra.frr3.io",
+      "group": "",
+      "labdir": "/home/mininet/rip_ospf_tests/clab-frr3/ra",
+      "kind": "linux",
+      "image": "ghcr.io/gckopper/redes-2-custom-router:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::2",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-e329cb079806",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/mininet/rip_ospf_tests/clab-frr3/ra",
+        "clab-node-longname": "clab-frr3-ra",
+        "clab-node-name": "ra",
+        "clab-node-type": "",
+        "clab-owner": "mininet",
+        "clab-topo-file": "/home/mininet/rip_ospf_tests/custom.clab.yml",
+        "containerlab": "frr3"
+      },
+      "port-bindings": [
+      ]
+    },
+    "rb": {
+      "index": "5",
+      "shortname": "rb",
+      "longname": "clab-frr3-rb",
+      "fqdn": "rb.frr3.io",
+      "group": "",
+      "labdir": "/home/mininet/rip_ospf_tests/clab-frr3/rb",
+      "kind": "linux",
+      "image": "ghcr.io/gckopper/redes-2-custom-router:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::4",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-e329cb079806",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/mininet/rip_ospf_tests/clab-frr3/rb",
+        "clab-node-longname": "clab-frr3-rb",
+        "clab-node-name": "rb",
+        "clab-node-type": "",
+        "clab-owner": "mininet",
+        "clab-topo-file": "/home/mininet/rip_ospf_tests/custom.clab.yml",
+        "containerlab": "frr3"
+      },
+      "port-bindings": [
+      ]
+    },
+    "rc": {
+      "index": "6",
+      "shortname": "rc",
+      "longname": "clab-frr3-rc",
+      "fqdn": "rc.frr3.io",
+      "group": "",
+      "labdir": "/home/mininet/rip_ospf_tests/clab-frr3/rc",
+      "kind": "linux",
+      "image": "ghcr.io/gckopper/redes-2-custom-router:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.7",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::7",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-e329cb079806",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/mininet/rip_ospf_tests/clab-frr3/rc",
+        "clab-node-longname": "clab-frr3-rc",
+        "clab-node-name": "rc",
+        "clab-node-type": "",
+        "clab-owner": "mininet",
+        "clab-topo-file": "/home/mininet/rip_ospf_tests/custom.clab.yml",
+        "containerlab": "frr3"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "a": {
+        "node": "ra",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:f2:e9:2b",
+        "peer": "z"
+      },
+      "z": {
+        "node": "rb",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:1c:85:90",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "ra",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:a8:17:f9",
+        "peer": "z"
+      },
+      "z": {
+        "node": "rc",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:0a:ab:9c",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "rb",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:aa:78:8c",
+        "peer": "z"
+      },
+      "z": {
+        "node": "rc",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:bb:f1:15",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "h1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:b4:3e:ce",
+        "peer": "z"
+      },
+      "z": {
+        "node": "ra",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:23:0f:34",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "h2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:a7:77:5c",
+        "peer": "z"
+      },
+      "z": {
+        "node": "ra",
+        "interface": "eth4",
+        "mac": "aa:c1:ab:08:d1:af",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "h3",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:df:6b:e4",
+        "peer": "z"
+      },
+      "z": {
+        "node": "rb",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:77:71:1a",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "h4",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:c1:e6:6c",
+        "peer": "z"
+      },
+      "z": {
+        "node": "rc",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:4d:d6:89",
+        "peer": "a"
+      }
+    }
+  ]
+}

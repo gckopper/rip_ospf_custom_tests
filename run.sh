@@ -2,7 +2,7 @@
 set -euo pipefail
 LAB=${1:-ospf}
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-YAML="$SCRIPT_DIR/frr3_${LAB}.clab.yml"
+YAML="$SCRIPT_DIR/${LAB}.clab.yml"
 LOGDIR="$SCRIPT_DIR/results"
 LOGFILE="$LOGDIR/results.log"
 mkdir -p "$LOGDIR"
