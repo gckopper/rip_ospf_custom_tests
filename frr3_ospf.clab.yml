@@ -1,0 +1,30 @@
+name: frr3
+topology:
+  nodes:
+    r1:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - ./cfg/ospf/r1:/etc/frr
+    r2:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - ./cfg/ospf/r2:/etc/frr
+    r3:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - ./cfg/ospf/r3:/etc/frr
+    h1:
+      kind: linux
+      image: ghcr.io/hellt/network-multitool:latest
+    h3:
+      kind: linux
+      image: ghcr.io/hellt/network-multitool:latest
+  links:
+    - endpoints: ["r1:eth1","r2:eth1"]
+    - endpoints: ["r2:eth2","r3:eth1"]
+    - endpoints: ["r3:eth2","r1:eth2"]
+    - endpoints: ["h1:eth1","r1:eth3"]
+    - endpoints: ["h3:eth1","r3:eth3"]
